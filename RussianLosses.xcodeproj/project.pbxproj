@@ -19,6 +19,11 @@
 		FF434402288C2F2C006AE428 /* FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF434401288C2F2C006AE428 /* FileName.swift */; };
 		FF434406288C45E1006AE428 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF434404288C45E1006AE428 /* DayCell.swift */; };
 		FF434407288C45E1006AE428 /* DayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF434405288C45E1006AE428 /* DayCell.xib */; };
+		FF43440B288C5BB0006AE428 /* DayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF434409288C5BB0006AE428 /* DayVC.swift */; };
+		FF43440C288C5BB0006AE428 /* DayVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF43440A288C5BB0006AE428 /* DayVC.xib */; };
+		FF43440F288C5D64006AE428 /* ShowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF43440E288C5D64006AE428 /* ShowError.swift */; };
+		FF434413288C6F6C006AE428 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF434411288C6F6C006AE428 /* InfoCell.swift */; };
+		FF434414288C6F6C006AE428 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF434412288C6F6C006AE428 /* InfoCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		FF434401288C2F2C006AE428 /* FileName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileName.swift; sourceTree = "<group>"; };
 		FF434404288C45E1006AE428 /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		FF434405288C45E1006AE428 /* DayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayCell.xib; sourceTree = "<group>"; };
+		FF434409288C5BB0006AE428 /* DayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayVC.swift; sourceTree = "<group>"; };
+		FF43440A288C5BB0006AE428 /* DayVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayVC.xib; sourceTree = "<group>"; };
+		FF43440E288C5D64006AE428 /* ShowError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowError.swift; sourceTree = "<group>"; };
+		FF434411288C6F6C006AE428 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		FF434412288C6F6C006AE428 /* InfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +78,7 @@
 		FF4343D8288C198D006AE428 /* RussianLosses */ = {
 			isa = PBXGroup;
 			children = (
+				FF43440D288C5D52006AE428 /* Extension */,
 				FF434400288C2F12006AE428 /* Enum */,
 				FF4343F2288C1A04006AE428 /* Resources */,
 				FF4343F1288C19FE006AE428 /* App */,
@@ -90,6 +101,7 @@
 		FF4343EE288C19E1006AE428 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FF434410288C6F4D006AE428 /* InfoCell */,
 				FF434403288C45BB006AE428 /* DayCell */,
 			);
 			path = View;
@@ -98,6 +110,7 @@
 		FF4343EF288C19EB006AE428 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FF434408288C5B90006AE428 /* DayVC */,
 				FF4343F3288C1A88006AE428 /* ListVC */,
 			);
 			path = Controller;
@@ -155,6 +168,32 @@
 				FF434405288C45E1006AE428 /* DayCell.xib */,
 			);
 			path = DayCell;
+			sourceTree = "<group>";
+		};
+		FF434408288C5B90006AE428 /* DayVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF434409288C5BB0006AE428 /* DayVC.swift */,
+				FF43440A288C5BB0006AE428 /* DayVC.xib */,
+			);
+			path = DayVC;
+			sourceTree = "<group>";
+		};
+		FF43440D288C5D52006AE428 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FF43440E288C5D64006AE428 /* ShowError.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FF434410288C6F4D006AE428 /* InfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				FF434411288C6F6C006AE428 /* InfoCell.swift */,
+				FF434412288C6F6C006AE428 /* InfoCell.xib */,
+			);
+			path = InfoCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +255,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF4343F7288C1ABB006AE428 /* ListVC.xib in Resources */,
+				FF434414288C6F6C006AE428 /* InfoCell.xib in Resources */,
+				FF43440C288C5BB0006AE428 /* DayVC.xib in Resources */,
 				FF434407288C45E1006AE428 /* DayCell.xib in Resources */,
 				FF4343E3288C1997006AE428 /* Assets.xcassets in Resources */,
 			);
@@ -229,8 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF4343F6288C1ABB006AE428 /* ListVC.swift in Sources */,
+				FF43440F288C5D64006AE428 /* ShowError.swift in Sources */,
 				FF434406288C45E1006AE428 /* DayCell.swift in Sources */,
 				FF4343DA288C198D006AE428 /* AppDelegate.swift in Sources */,
+				FF43440B288C5BB0006AE428 /* DayVC.swift in Sources */,
+				FF434413288C6F6C006AE428 /* InfoCell.swift in Sources */,
 				FF434402288C2F2C006AE428 /* FileName.swift in Sources */,
 				FF4343FD288C2C03006AE428 /* LossesData.swift in Sources */,
 				FF4343FF288C2D27006AE428 /* NetworkManager.swift in Sources */,

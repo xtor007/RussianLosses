@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListVC" customModule="RussianLosses" customModuleProvider="target">
             <connections>
                 <outlet property="listTableView" destination="F0g-PH-66x" id="EEu-WI-AAv"/>
+                <outlet property="statusLabel" destination="FQx-mf-Gtd" id="zTo-LW-AwB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,7 +20,17 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="F0g-PH-66x">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQx-mf-Gtd">
+                    <rect key="frame" x="169.5" y="437.5" width="75" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="75" id="JLt-0y-W1R"/>
+                        <constraint firstAttribute="height" constant="21" id="y6q-zJ-hxJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="F0g-PH-66x">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
@@ -29,7 +40,9 @@
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="F0g-PH-66x" secondAttribute="bottom" id="42s-2I-0AC"/>
                 <constraint firstItem="F0g-PH-66x" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="KOn-3S-YeY"/>
+                <constraint firstItem="FQx-mf-Gtd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MZj-Nl-167"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="F0g-PH-66x" secondAttribute="trailing" id="fhu-Yl-PLW"/>
+                <constraint firstItem="FQx-mf-Gtd" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="nQz-ae-Gey"/>
                 <constraint firstItem="F0g-PH-66x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nzb-ax-1xO"/>
             </constraints>
             <point key="canvasLocation" x="139" y="114"/>

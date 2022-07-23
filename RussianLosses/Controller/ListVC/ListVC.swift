@@ -10,22 +10,26 @@ import UIKit
 class ListVC: UIViewController {
     
     @IBOutlet weak var listTableView: UITableView!
+    @IBOutlet weak var statusLabel: UILabel!
     
     private var lossesData = [LossesData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
         title = "Russian losses"
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         initTable()
         loadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     ///Load data to variable lossesData
     private func loadData() {
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             guard let self = self else {
-                //error
                 return
             }
             NetworkManager.shared.getData(fromFile: .equipment) { (equipmentData: [LossesEquipmentData]) in
@@ -33,12 +37,16 @@ class ListVC: UIViewController {
                     self.lossesData = self.combineData(equipments: equipmentData, personnels: personnelData)
                     DispatchQueue.main.async {
                         self.listTableView.reloadData()
+                        self.listTableView.isHidden = false
+                        self.statusLabel.isHidden = true
                     }
                 } onError: { message in
-                    print(message)//
+                    self.showError(message: message)
+                    self.statusLabel.text = "Crash"
                 }
             } onError: { message in
-                print(message)//
+                self.showError(message: message)
+                self.statusLabel.text = "Crash"
             }
         }
     }
@@ -85,8 +93,15 @@ extension ListVC: UITableViewDelegate, UITableViewDataSource {
             cell.uploadData(lossesData[indexPath.row])
             return cell
         } else {
+            showError(message: "Something isn't good")
+            statusLabel.text = "Crash"
             return UITableViewCell()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dayVC = DayVC(dayData: lossesData[indexPath.row])
+        navigationController?.pushViewController(dayVC, animated: true)
     }
     
 }
