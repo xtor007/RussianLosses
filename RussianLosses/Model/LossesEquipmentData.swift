@@ -75,4 +75,24 @@ struct LossesEquipmentData: Decodable, Hashable {
         greatestLossesDirection = try? values.decode(String.self, forKey: .greatestLossesDirection)
     }
     
+    func getAllLossesCount() -> Int {
+        var optionalCount = 0
+        if let militaryAuto = militaryAuto {
+            optionalCount += militaryAuto
+        }
+        if let fuelTank = fuelTank {
+            optionalCount += fuelTank
+        }
+        if let vehiclesAndFuelTanks = vehiclesAndFuelTanks {
+            optionalCount += vehiclesAndFuelTanks
+        }
+        if let specialEquipment = specialEquipment {
+            optionalCount += specialEquipment
+        }
+        if let cruiseMissiles = cruiseMissiles {
+            optionalCount += cruiseMissiles
+        }
+        return aircraft+helicopter+tank+apc+fieldArtillery+mrl+drone+navalShip+antiAircraftWarfare+optionalCount
+    }
+    
 }

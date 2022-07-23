@@ -17,6 +17,7 @@ class ListVC: UIViewController {
         super.viewDidLoad()
         title = "Russian losses"
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        initTable()
         loadData()
     }
     
@@ -31,7 +32,7 @@ class ListVC: UIViewController {
                 NetworkManager.shared.getData(fromFile: .personnel) { (personnelData: [LossesPersonnelData]) in
                     self.lossesData = self.combineData(equipments: equipmentData, personnels: personnelData)
                     DispatchQueue.main.async {
-                        print(self.lossesData)
+                        self.listTableView.reloadData()
                     }
                 } onError: { message in
                     print(message)//
@@ -63,5 +64,29 @@ class ListVC: UIViewController {
         }
         return result
     }
+    
+    ///Load data to table
+    private func initTable() {
+        listTableView.register(UINib(nibName: DayCell.nibName, bundle: nil), forCellReuseIdentifier: DayCell.cellId)
+        listTableView.delegate = self
+        listTableView.dataSource = self
+    }
 
+}
+
+extension ListVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return lossesData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: DayCell.cellId, for: indexPath) as? DayCell {
+            cell.uploadData(lossesData[indexPath.row])
+            return cell
+        } else {
+            return UITableViewCell()
+        }
+    }
+    
 }

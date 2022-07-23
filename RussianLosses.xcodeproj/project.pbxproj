@@ -17,6 +17,8 @@
 		FF4343FD288C2C03006AE428 /* LossesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4343FC288C2C03006AE428 /* LossesData.swift */; };
 		FF4343FF288C2D27006AE428 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4343FE288C2D27006AE428 /* NetworkManager.swift */; };
 		FF434402288C2F2C006AE428 /* FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF434401288C2F2C006AE428 /* FileName.swift */; };
+		FF434406288C45E1006AE428 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF434404288C45E1006AE428 /* DayCell.swift */; };
+		FF434407288C45E1006AE428 /* DayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF434405288C45E1006AE428 /* DayCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		FF4343FC288C2C03006AE428 /* LossesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesData.swift; sourceTree = "<group>"; };
 		FF4343FE288C2D27006AE428 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FF434401288C2F2C006AE428 /* FileName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileName.swift; sourceTree = "<group>"; };
+		FF434404288C45E1006AE428 /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
+		FF434405288C45E1006AE428 /* DayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +72,8 @@
 				FF4343F2288C1A04006AE428 /* Resources */,
 				FF4343F1288C19FE006AE428 /* App */,
 				FF4343F0288C19F1006AE428 /* Model */,
-				FF4343EF288C19EB006AE428 /* View */,
-				FF4343EE288C19E1006AE428 /* Controller */,
+				FF4343EF288C19EB006AE428 /* Controller */,
+				FF4343EE288C19E1006AE428 /* View */,
 				FF4343ED288C19D4006AE428 /* Manager */,
 			);
 			path = RussianLosses;
@@ -83,19 +87,20 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		FF4343EE288C19E1006AE428 /* Controller */ = {
+		FF4343EE288C19E1006AE428 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FF434403288C45BB006AE428 /* DayCell */,
 			);
-			path = Controller;
+			path = View;
 			sourceTree = "<group>";
 		};
-		FF4343EF288C19EB006AE428 /* View */ = {
+		FF4343EF288C19EB006AE428 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				FF4343F3288C1A88006AE428 /* ListVC */,
 			);
-			path = View;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		FF4343F0288C19F1006AE428 /* Model */ = {
@@ -141,6 +146,15 @@
 				FF434401288C2F2C006AE428 /* FileName.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		FF434403288C45BB006AE428 /* DayCell */ = {
+			isa = PBXGroup;
+			children = (
+				FF434404288C45E1006AE428 /* DayCell.swift */,
+				FF434405288C45E1006AE428 /* DayCell.xib */,
+			);
+			path = DayCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF4343F7288C1ABB006AE428 /* ListVC.xib in Resources */,
+				FF434407288C45E1006AE428 /* DayCell.xib in Resources */,
 				FF4343E3288C1997006AE428 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF4343F6288C1ABB006AE428 /* ListVC.swift in Sources */,
+				FF434406288C45E1006AE428 /* DayCell.swift in Sources */,
 				FF4343DA288C198D006AE428 /* AppDelegate.swift in Sources */,
 				FF434402288C2F2C006AE428 /* FileName.swift in Sources */,
 				FF4343FD288C2C03006AE428 /* LossesData.swift in Sources */,
