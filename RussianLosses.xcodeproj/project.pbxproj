@@ -12,6 +12,11 @@
 		FF4343E3288C1997006AE428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF4343E2288C1997006AE428 /* Assets.xcassets */; };
 		FF4343F6288C1ABB006AE428 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4343F4288C1ABB006AE428 /* ListVC.swift */; };
 		FF4343F7288C1ABB006AE428 /* ListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF4343F5288C1ABB006AE428 /* ListVC.xib */; };
+		FF4343F9288C20B3006AE428 /* LossesEquipmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4343F8288C20B3006AE428 /* LossesEquipmentData.swift */; };
+		FF4343FB288C23A2006AE428 /* LossesPersonnelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4343FA288C23A2006AE428 /* LossesPersonnelData.swift */; };
+		FF4343FD288C2C03006AE428 /* LossesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4343FC288C2C03006AE428 /* LossesData.swift */; };
+		FF4343FF288C2D27006AE428 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4343FE288C2D27006AE428 /* NetworkManager.swift */; };
+		FF434402288C2F2C006AE428 /* FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF434401288C2F2C006AE428 /* FileName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		FF4343E7288C1997006AE428 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF4343F4288C1ABB006AE428 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		FF4343F5288C1ABB006AE428 /* ListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListVC.xib; sourceTree = "<group>"; };
+		FF4343F8288C20B3006AE428 /* LossesEquipmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesEquipmentData.swift; sourceTree = "<group>"; };
+		FF4343FA288C23A2006AE428 /* LossesPersonnelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesPersonnelData.swift; sourceTree = "<group>"; };
+		FF4343FC288C2C03006AE428 /* LossesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesData.swift; sourceTree = "<group>"; };
+		FF4343FE288C2D27006AE428 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FF434401288C2F2C006AE428 /* FileName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 		FF4343D8288C198D006AE428 /* RussianLosses */ = {
 			isa = PBXGroup;
 			children = (
+				FF434400288C2F12006AE428 /* Enum */,
 				FF4343F2288C1A04006AE428 /* Resources */,
 				FF4343F1288C19FE006AE428 /* App */,
 				FF4343F0288C19F1006AE428 /* Model */,
@@ -67,6 +78,7 @@
 		FF4343ED288C19D4006AE428 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				FF4343FE288C2D27006AE428 /* NetworkManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -89,6 +101,9 @@
 		FF4343F0288C19F1006AE428 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FF4343F8288C20B3006AE428 /* LossesEquipmentData.swift */,
+				FF4343FA288C23A2006AE428 /* LossesPersonnelData.swift */,
+				FF4343FC288C2C03006AE428 /* LossesData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -118,6 +133,14 @@
 				FF4343F5288C1ABB006AE428 /* ListVC.xib */,
 			);
 			path = ListVC;
+			sourceTree = "<group>";
+		};
+		FF434400288C2F12006AE428 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				FF434401288C2F2C006AE428 /* FileName.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,7 +215,12 @@
 			files = (
 				FF4343F6288C1ABB006AE428 /* ListVC.swift in Sources */,
 				FF4343DA288C198D006AE428 /* AppDelegate.swift in Sources */,
+				FF434402288C2F2C006AE428 /* FileName.swift in Sources */,
+				FF4343FD288C2C03006AE428 /* LossesData.swift in Sources */,
+				FF4343FF288C2D27006AE428 /* NetworkManager.swift in Sources */,
 				FF4343DC288C198D006AE428 /* SceneDelegate.swift in Sources */,
+				FF4343F9288C20B3006AE428 /* LossesEquipmentData.swift in Sources */,
+				FF4343FB288C23A2006AE428 /* LossesPersonnelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
